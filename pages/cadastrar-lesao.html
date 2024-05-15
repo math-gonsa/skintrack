@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinTrack</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Custom styles for the lateral menu bar */
+        .body {
+            background-color: #FFFFFF;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #004D40;
+            padding-top: 20px;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+        }
+
+        .nav-link {
+            color: #E0F2F1
+        }
+
+        /* Custom styles for the center area */
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+
+        .input-field input[type="text"],
+        .input-field input[type="tel"],
+        .input-field input[type="email"],
+        .input-field input[type="date"] {
+            color: #212121;
+            border-bottom: 1px solid #757575;
+        }
+
+        .input-field input[type="text"]:focus:not([readonly]),
+        .input-field input[type="tel"]:focus:not([readonly]),
+        .input-field input[type="email"]:focus:not([readonly]),
+        .input-field input[type="date"]:focus:not([readonly]) {
+            border-bottom: 1px solid #E0F2F1;
+            box-shadow: 0 1px 0 0 #E0F2F1;
+        }
+
+        .input-field input[type="text"]:focus:not([readonly])+label,
+        .input-field input[type="tel"]:focus:not([readonly])+label,
+        .input-field input[type="email"]:focus:not([readonly])+label,
+        .input-field input[type="date"]:focus:not([readonly])+label {
+            color: #E0F2F1;
+        }
+
+        .input-field input[type="text"]:focus:not([readonly])~.helper-text::after,
+        .input-field input[type="tel"]:focus:not([readonly])~.helper-text::after,
+        .input-field input[type="email"]:focus:not([readonly])~.helper-text::after,
+        .input-field input[type="date"]:focus:not([readonly])~.helper-text::after {
+            border-bottom: 2px solid #000000;
+        }
+
+        .input-field input[type="text"]:focus:not([readonly])~.material-icons,
+        .input-field input[type="tel"]:focus:not([readonly])~.material-icons,
+        .input-field input[type="email"]:focus:not([readonly])~.material-icons,
+        .input-field input[type="date"]:focus:not([readonly])~.material-icons,
+        .input-field input[type="text"]:focus:not([readonly])~.prefix,
+        .input-field input[type="tel"]:focus:not([readonly])~.prefix,
+        .input-field input[type="email"]:focus:not([readonly])~.prefix,
+        .input-field input[type="date"]:focus:not([readonly])~.prefix {
+            color: #E0F2F1;
+
+        }
+
+        .input-field input[type="text"]:focus:not([readonly])+label,
+        .input-field input[type="tel"]:focus:not([readonly])+label,
+        .input-field input[type="email"]:focus:not([readonly])+label,
+        .input-field input[type="date"]:focus:not([readonly])+label {
+            color: #000000 !important;
+        }
+
+        .input-field input[type="date"]+label:after {
+            color: #000000;
+        }
+
+
+
+        button[type="submit"],
+        button[type="button"] {
+            background-color: #E0F2F1;
+        }
+
+        button[type="submit"]:hover,
+        button[type="button"]:hover {
+            background-color: #4DB6AC;
+        }
+
+        .content {
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Lateral menu bar -->
+    <div class="sidebar">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pagina Principal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cadastrar novo paciente</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pacientes</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Center area with form -->
+    <div class="content">
+
+
+        <div class="container">
+            <h2>Cadastrar lesões</h2>
+            <div class="row">
+                <div class="col-xs-6">
+                    <img class="body-image" src="corpo.png" alt="Corpo Humano">
+                </div>
+                <div class="col-xs-6">
+                    <form action="seu_script_de_processamento.php" method="POST" enctype="multipart/form-data">
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="coloracao" class="form-label">Coloração:</label>
+                                    <input type="text" class="form-control" id="coloracao" name="coloracao">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="cianose" class="form-label">Cianose:</label>
+                                    <input type="text" class="form-control" id="cianose" name="cianose">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="umidade" class="form-label">Umidade:</label>
+                                    <input type="text" class="form-control" id="umidade" name="umidade">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="pele" class="form-label">Pele:</label>
+                                    <input type="text" class="form-control" id="pele" name="pele">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="textura_da_pele" class="form-label">Textura da Pele:</label>
+                                    <input type="text" class="form-control" id="textura_da_pele" name="textura_da_pele">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="temperatura" class="form-label">Temperatura:</label>
+                                    <input type="text" class="form-control" id="temperatura" name="temperatura">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="sensibilidade_termica" class="form-label">Sensibilidade Termica:</label>
+                                    <input type="text" class="form-control" id="sensibilidade_termica"
+                                        name="sensibilidade_termica">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="sensibilidade_tatil" class="form-label">Sensibilidade Tatil:</label>
+                                    <input type="text" class="form-control" id="sensibilidade_tatil"
+                                        name="sensibilidade_tatil">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="pressao_arterial" class="form-label">Pressão Arterial:</label>
+                                    <input type="text" class="form-control" id="pressao_arterial"
+                                        name="pressao_arterial">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="frequencia_cardiaca" class="form-label">Frequência Cardíaca:</label>
+                                    <input type="text" class="form-control" id="frequencia_cardiaca"
+                                        name="frequencia_cardiaca">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Adicione mais campos aqui seguindo a mesma estrutura -->
+                        <button type="submit" class="btn btn-primary" disabled="true">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

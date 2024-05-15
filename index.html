@@ -1,32 +1,153 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
+    <title>SkinTrack</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Google Material Design Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Custom styles for the lateral menu bar */
+        .body {
+            background-color: #FFFFFF;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #004D40;
+            padding-top: 20px;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+        }
+
+        .nav-link {
+            color: #E0F2F1
+        }
+
+        /* Custom styles for the center area */
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+
+        .input-field input[type="text"],
+        .input-field input[type="tel"],
+        .input-field input[type="email"],
+        .input-field input[type="date"] {
+            color: #212121;
+            border-bottom: 1px solid #757575;
+        }
+
+        .input-field input[type="text"]:focus:not([readonly]),
+        .input-field input[type="tel"]:focus:not([readonly]),
+        .input-field input[type="email"]:focus:not([readonly]),
+        .input-field input[type="date"]:focus:not([readonly]) {
+            border-bottom: 1px solid #E0F2F1;
+            box-shadow: 0 1px 0 0 #E0F2F1;
+        }
+
+        .input-field input[type="text"]:focus:not([readonly])+label,
+        .input-field input[type="tel"]:focus:not([readonly])+label,
+        .input-field input[type="email"]:focus:not([readonly])+label,
+        .input-field input[type="date"]:focus:not([readonly])+label {
+            color: #E0F2F1;
+        }
+
+        .input-field input[type="text"]:focus:not([readonly])~.helper-text::after,
+        .input-field input[type="tel"]:focus:not([readonly])~.helper-text::after,
+        .input-field input[type="email"]:focus:not([readonly])~.helper-text::after,
+        .input-field input[type="date"]:focus:not([readonly])~.helper-text::after {
+            border-bottom: 2px solid #000000;
+        }
+
+        .input-field input[type="text"]:focus:not([readonly])~.material-icons,
+        .input-field input[type="tel"]:focus:not([readonly])~.material-icons,
+        .input-field input[type="email"]:focus:not([readonly])~.material-icons,
+        .input-field input[type="date"]:focus:not([readonly])~.material-icons,
+        .input-field input[type="text"]:focus:not([readonly])~.prefix,
+        .input-field input[type="tel"]:focus:not([readonly])~.prefix,
+        .input-field input[type="email"]:focus:not([readonly])~.prefix,
+        .input-field input[type="date"]:focus:not([readonly])~.prefix {
+            color: #E0F2F1;
+
+        }
+
+        .input-field input[type="text"]:focus:not([readonly])+label,
+        .input-field input[type="tel"]:focus:not([readonly])+label,
+        .input-field input[type="email"]:focus:not([readonly])+label,
+        .input-field input[type="date"]:focus:not([readonly])+label {
+            color: #000000 !important;
+        }
+
+        .input-field input[type="date"]+label:after {
+            color: #000000;
+        }
+
+
+
+        button[type="submit"],
+        button[type="button"] {
+            background-color: #E0F2F1;
+        }
+
+        button[type="submit"]:hover,
+        button[type="button"]:hover {
+            background-color: #4DB6AC;
+        }
+
+        .content {
+            background-color: #FFFFFF;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Analise de lesões corporais</h1>
-        <br>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Registrar novo paciente</h5>
-                <p class="card-text">Registrar novo paciente com lesões corporais</p>
-                <a href="pages/form-step-one.html" class="btn btn-primary">Registrar</a>
-            </div>
-        </div>
-        <br>
-
+    <!-- Lateral menu bar -->
+    <div class="sidebar">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pagina Principal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cadastrar novo paciente</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pacientes</a>
+            </li>
+        </ul>
     </div>
-    <!-- Bootstrap JavaScript (opcional, caso queira usar funcionalidades como dropdowns) -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Center area with form -->
+    <div class="content">
+        <div class="container">
+            <h1>Analise de lesões corporais</h1>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Registrar novo paciente com lesões corporais</p>
+                    <a href="pages/form-step-one.html" class="btn btn-primary">Registrar</a>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <!-- Bootstrap JS and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
